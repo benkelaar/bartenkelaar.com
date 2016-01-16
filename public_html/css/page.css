@@ -1,0 +1,26 @@
+body {
+	background-color: #f9f9f9;
+	font-family: sans-serif;
+	font-size: 80px;
+}
+
+div {
+	color: rgba(195, 195, 195, 0);
+	text-align: center;
+    -webkit-transition: color 2s;
+    transition: color 2s;
+}
+
+.introduction {
+    -webkit-transition-delay: 2s;
+	transition-delay: 2s;
+}
+
+.truth {
+    -webkit-transition-delay: 4s;
+	transition-delay: 4s;
+}
+
+.shown {
+	color: rgba(195, 195, 195, 1);
+}
