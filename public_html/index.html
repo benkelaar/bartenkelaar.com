@@ -5,21 +5,53 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Bart Enkelaar - Welcome</title>
-	
+
 	<link rel="stylesheet" href="css/page.css" />
+	<link rel="stylesheet" href="css/index.css" />
 </head>
 <body>
-	<div class="greeting">Hi!</div>
-	<div class="introduction">I'm Bart.</div>
-	<div class="truth">You're awesome.</div>
-	
-	<script type="text/javascript">
-		window.onload = function () {
-			var divs = document.getElementsByTagName('div');
-			Array.prototype.forEach.call(divs, function (div){
-			    div.className += ' shown';
-			});
-		}
-	</script>
+	<nav>
+		<a href="index.html">About</a>
+		<a href="javatoolbox/intro.html">The Java Toolbox</a>
+		<a href="validation.html">Validation</a>
+	</nav>
+	<main>
+		<section>
+			<a name="aboutme"><h1>About Me</h1></a>
+			<p>
+				I am an enthusiastic software engineer by day and a software
+				engineering enthousiast by night.
+			</p>
+
+			<p>I have the most experience with Java and the JVM but find that
+				for most software engineering problems, programming language is just
+				the dialect you speak in the language of solutions.
+			</p>
+		</section>
+		<section>
+			<a name="thissite"><h1>This Site</h1></a>
+			<p>
+				This site was set up to host a personal project of mine and the original
+				site was an experiment with CSS transitions, you can still see it
+			  <a href="validation.html">under the Validation header</a>.
+		  </p>
+
+			<p>
+				The current implementation is a bit of an experimentation with the HTML5
+				semantic tags and crafting a nice static page with as little javascript
+				as possible. <br />
+				It also serves as a location for some articles I would like
+				to write to help some of my colleagues and other engineers to better
+				comprehend the universe that is the Java Programming Language.
+		  </p>
+		</section>
+		<section>
+			<a name="work"><h1>Work</h1></a>
+			I work at <a href="http://www.bol.com/">bol.com</a> as a software
+			engineer. I'm currently working on the backend application that keeps track
+			of stock in several warehouses and communicates the correct information
+			about that to the rest of the SOA landscape.
+		</section>
+	</main>
 </body>
 </html>
