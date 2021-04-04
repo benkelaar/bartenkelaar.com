@@ -1,0 +1,63 @@
+:root {
+  --menu-size: 10rem;
+}
+
+html, body {
+  height: 100%;
+  background-color: #333639;
+  margin: 0;
+}
+
+body, nav {
+  display: grid;
+}
+
+nav {
+  background-color: blue;
+}
+
+nav a {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav a:hover {
+  background-color: lightblue;
+}
+
+section:hover {
+  background-color: red;
+}
+
+@media(min-width: 20rem) {
+  body, nav {
+    grid: 50% 50% / 50% 50%;
+  }
+
+  nav {
+    position: absolute;
+    height: var(--menu-size);
+    width: var(--menu-size);
+    top: calc(50% - var(--menu-size) / 2);
+    left: calc(50% - var(--menu-size) / 2);
+    border-radius: 50%;
+  }
+
+  nav a:first-child {
+    border-top-left-radius: 100%;
+  }
+
+  nav a:nth-child(2) {
+    border-top-right-radius: 100%;
+  }
+
+  nav a:nth-child(3) {
+    border-bottom-left-radius: 100%;
+  }
+
+  nav a:last-child {
+    border-bottom-right-radius: 100%;
+  }
+}
