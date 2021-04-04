@@ -9,17 +9,39 @@
 	<link rel="stylesheet" href="css/rotary.css" />
 </head>
 	<body>
-		<section id="1">
+		<section id="1" onclick="selectTarget(event)">
 			<a href="#1">link 1</a>
 		</section>
-		<section id="2">
+		<section id="2" onclick="selectTarget(event)">
 			<a href="#2">link 2</a>
 		</section>
-		<section id="3">
+		<section id="3" onclick="selectTarget(event)">
 			<a href="#3">link 3</a>
 		</section>
-		<section id="4">
+		<section id="4" onclick="selectTarget(event)">
 			<a href="#4">link 4</a>
 		</section>
+		<a id="home" onclick="reCenter()"></a>
+		<script lang="text/javascript">
+			function selectTarget(event) {
+				location.href = '#' + event.target.id;
+			}
+
+			function reCenter() {
+				location.hash = '';
+				scrollToCenter();
+			}
+
+			function scrollToCenter() {
+				const { width, height } = visualViewport;
+				scrollTo((width / 2) - 60, (height / 2) - 60);
+			}
+
+			window.onload = function () {
+				if (!location.hash) {
+					scrollToCenter();
+				}
+			};
+		</script>
 	</body>
 </html>
