@@ -1,5 +1,6 @@
 :root {
   --menu-size: 10rem;
+  --button-size: calc(var(--menu-size) / 2)
 }
 
 html, body {
@@ -8,56 +9,54 @@ html, body {
   margin: 0;
 }
 
-body, nav {
+body {
   display: grid;
+  grid: 50% 50% / 50% 50%;
 }
 
-nav {
-  background-color: blue;
+section {
+  position: relative;
 }
 
-nav a {
-  color: white;
+section a {
+  position: absolute;
+  height: var(--button-size);
+  width: var(--button-size);
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-nav a:hover {
-  background-color: lightblue;
+  background-color: blue;
+  color: white;
 }
 
 section:hover {
   background-color: red;
 }
 
-@media(min-width: 20rem) {
-  body, nav {
-    grid: 50% 50% / 50% 50%;
-  }
+section:hover a {
+  background-color: lightblue;
+}
 
-  nav {
-    position: absolute;
-    height: var(--menu-size);
-    width: var(--menu-size);
-    top: calc(50% - var(--menu-size) / 2);
-    left: calc(50% - var(--menu-size) / 2);
-    border-radius: 50%;
-  }
+section:first-child a {
+  border-top-left-radius: 100%;
+  right: 0;
+  bottom: 0;
+}
 
-  nav a:first-child {
-    border-top-left-radius: 100%;
-  }
+section:nth-child(2) a {
+  border-top-right-radius: 100%;
+  left: 0;
+  bottom: 0;
+}
 
-  nav a:nth-child(2) {
-    border-top-right-radius: 100%;
-  }
+section:nth-child(3) a {
+  border-bottom-left-radius: 100%;
+  right: 0;
+  top: 0;
+}
 
-  nav a:nth-child(3) {
-    border-bottom-left-radius: 100%;
-  }
-
-  nav a:last-child {
-    border-bottom-right-radius: 100%;
-  }
+section:last-child a {
+  border-bottom-right-radius: 100%;
+  left: 0;
+  top: 0;
 }
